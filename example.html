@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Molecular Grid</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light p-4">
+
+    <div class="container">
+        <h1 class="mb-4 text-center">Molecular Grid</h1>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col">
+                <div data-smiles="CC1=C(C=C(C=C1)NC(=O)C2=CC=C(C=C2)CN3CCN(CC3)C)NC4=NC=CC(=N4)C5=CN=CC=C5"></div>
+            </div>
+            <div class="col">
+                <div data-smiles="CC(=O)Oc1ccccc1C(=O)O"></div>
+            </div>
+            <div class="col">
+                <div data-smiles="CN1C=NC2=C1C(=O)N(C(=O)N2C)C" data-width="500"></div>
+            </div>
+            <div class="col">
+                <div data-smiles="c1ccc2[nH]ccc2c1"></div>
+            </div>
+            <div class="col">
+                <div data-smiles="C1COCCN1C2=CC=CC=C2N" data-height="100"></div>
+            </div>
+            <div class="col">
+                <div data-smiles="[B].[La].[N].[K]" data-height="100"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Smiles Drawer JS -->
+    <script src="smiles-render.js"></script>
+</body>
+</html>
