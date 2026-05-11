@@ -106,7 +106,6 @@ const Render = (() => {
             resizeObserver.observe(parent);
             return;
         }
-        console.log(`parent width: ${parentRect.width}`);
 
         let width = parseInt(el.dataset.width || (parentRect.width > 0 ? parentRect.width : CONFIG.width));
         let height = parseInt(el.dataset.height || CONFIG.height);
@@ -119,12 +118,10 @@ const Render = (() => {
                     const mol = RDKIT.get_mol(el.dataset.smiles.trim());
                     const renderOpts = { width, height, ...CONFIG.drawingDetails };
                     const svgText = mol.get_svg_with_highlights(JSON.stringify(renderOpts));
-                    console.log(width, height)
                     el.innerHTML = svgText.replace('<svg', '<svg class="smiles-svg"');
                     mol.delete();
                     el.dataset.smilesRendered = '1';
                 } catch (e) {
-                    console.log(`RDKit Render Error: ${e}`)
                     el.innerHTML = `<small style="color:red">RDKit Render Error</small>`;
                 }
             });
